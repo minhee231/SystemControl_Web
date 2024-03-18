@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADMIN</title>
+</head>
+<body>
+    <header bg-color="black">
+        <h1>AdminPage</h1>
+        <form id="admin" method="post">
+            <input type="button" value="과제 삭제" onclick="deleteAssignment()">
+            <input type="button" value="과제 추가" onclick="addAssignment()">
+        </form>
+    </header>
+</body>
+
+<script>
+function deleteAssignment() {
+    var password = prompt("패스워드를 입력해주세요.");
+    if (password === null || password === "") {
+        alert("패스워드를 입력해야 합니다.");
+        return;
+    }
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "/delete_assignment", true);
+    xhr.setRequestHeader("Content-Type", "application/json");
+    xhr.onreadystatechange = function () {
+    };
+    xhr.send(JSON.stringify({ password: password }));
+    
+}
+
+function addAssignment() {
+    var title = prompt("제목을 입력해주세요.")
+    if (title === null || password === "") {
+        alert("제목을 입력해야합니다.")
+        return;
+    }
+
+    var password = prompt("패스워드를 입력해주세요.")
+    if (password === null || password === "") {
+        alert("패스워드를 입력해야 합니다.");
+        return;
+    }
+
+    var xhr = new XMLHttpRequest();
+
+    xhr.open("POST", "/add_assignment", true);
+    xhr.setRequestHeader("Content-Type", "application/json");
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+            // if (xhr.status === 200) {
+            //     alert("과제가 추가되었습니다.");
+            // }
+        }
+    };
+    xhr.send(JSON.stringify({ password: password , title: title}));
+}
+</script>
+</html>

@@ -1,0 +1,172 @@
+{
+    "assignment1": {
+        "title": "제목1",
+        "student_info": {
+            "1": {
+                "name": "구민희",
+                "check_status": false
+            },
+            "2": {
+                "name": "권민서",
+                "check_status": false
+            },
+            "3": {
+                "name": "김민석",
+                "check_status": false
+            },
+            "4": {
+                "name": "김진영",
+                "check_status": false
+            },
+            "5": {
+                "name": "김태훈",
+                "check_status": false
+            },
+            "6": {
+                "name": "박서혁",
+                "check_status": false
+            },
+            "7": {
+                "name": "박승빈",
+                "check_status": false
+            },
+            "8": {
+                "name": "성지호",
+                "check_status": false
+            },
+            "9": {
+                "name": "손필국",
+                "check_status": false
+            },
+            "10": {
+                "name": "신지섭",
+                "check_status": false
+            },
+            "11": {
+                "name": "윤다현",
+                "check_status": false
+            },
+            "12": {
+                "name": "이도경",
+                "check_status": false
+            },
+            "13": {
+                "name": "이도윤",
+                "check_status": false
+            },
+            "14": {
+                "name": "이상훈",
+                "check_status": false
+            },
+            "15": {
+                "name": "이준민",
+                "check_status": false
+            },
+            "16": {
+                "name": "이지명",
+                "check_status": false
+            },
+            "17": {
+                "name": "정주향",
+                "check_status": false
+            },
+            "18": {
+                "name": "조예찬",
+                "check_status": false
+            },
+            "19": {
+                "name": "최윤서",
+                "check_status": false
+            },
+            "20": {
+                "name": "한다희",
+                "check_status": false
+            }
+        }
+    },
+    "assignment2": {
+        "title": "과제",
+        "student_info": {
+            "1": {
+                "name": "구민희",
+                "check_status": false
+            },
+            "2": {
+                "name": "권민서",
+                "check_status": false
+            },
+            "3": {
+                "name": "김민석",
+                "check_status": false
+            },
+            "4": {
+                "name": "김진영",
+                "check_status": false
+            },
+            "5": {
+                "name": "김태훈",
+                "check_status": false
+            },
+            "6": {
+                "name": "박서혁",
+                "check_status": false
+            },
+            "7": {
+                "name": "박승빈",
+                "check_status": false
+            },
+            "8": {
+                "name": "성지호",
+                "check_status": false
+            },
+            "9": {
+                "name": "손필국",
+                "check_status": false
+            },
+            "10": {
+                "name": "신지섭",
+                "check_status": false
+            },
+            "11": {
+                "name": "윤다현",
+                "check_status": false
+            },
+            "12": {
+                "name": "이도경",
+                "check_status": false
+            },
+            "13": {
+                "name": "이도윤",
+                "check_status": false
+            },
+            "14": {
+                "name": "이상훈",
+                "check_status": false
+            },
+            "15": {
+                "name": "이준민",
+                "check_status": false
+            },
+            "16": {
+                "name": "이지명",
+                "check_status": false
+            },
+            "17": {
+                "name": "정주향",
+                "check_status": false
+            },
+            "18": {
+                "name": "조예찬",
+                "check_status": false
+            },
+            "19": {
+                "name": "최윤서",
+                "check_status": false
+            },
+            "20": {
+                "name": "한다희",
+                "check_status": false
+            }
+        }
+    }
+}

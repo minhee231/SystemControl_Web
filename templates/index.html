@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>시스템관리 진행체크</title>
+    <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="expires" content="0">
+
+</head>
+<body>
+{% for key, value in json_obj.json_data.items() %}
+    <h1>{{ value['title'] }}</h1>
+    {% for _key, _value in value['student_info'].items() %}
+    <form id="form_{{ _key }}" method="post">
+        {% if _value['check_status'] %}
+        <input type="checkbox" id="checkbox_{{ _key }}" name="checkbox_{{ _key }}" checked>{{ _value['name'] }}
+        {% else %}
+        <input type="checkbox" id="checkbox_{{ _key }}" name="checkbox_{{ _key }}">{{ _value['name'] }}
+        {% endif %}
+        <input type="button" value="확인" onclick="updateStatus('{{ key }}', '{{ _key }}')"><br>
+    </form>
+    {% endfor %}
+{% endfor %}
+
+<script>
+function updateStatus(assignmentId, studentId) {
+    var checkbox = document.getElementById('checkbox_' + studentId);
+    var checked = checkbox.checked;
+
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "/update_status", true);
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+            var response = JSON.parse(xhr.responseText);
+            if (response.success) {
+                console.log("상태가 업데이트되었습니다.");
+            } else {
+                console.error("상태 업데이트에 실패했습니다.");
+            }
+        }
+    };
+    xhr.send(JSON.stringify({
+        assignment_id: assignmentId,
+        student_id: studentId,
+        checked: checked
+    }));
+}
+</script>
+</body>
+</html>
