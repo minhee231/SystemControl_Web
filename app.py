@@ -66,6 +66,7 @@ def admin():
 
 @app.route("/update_status", methods=["POST"])
 def update_status():
+    ctrl_json = JsonContorl()
     data = request.json
     assignment_id = data["assignment_id"]
     student_id = data["student_id"]
